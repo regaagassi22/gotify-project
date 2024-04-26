@@ -74,4 +74,6 @@ func main() {
 	router.PUT("/ratings/:id", middleware.BasicAuth, controllers.UpdateRating)
 	router.DELETE("/ratings/:id", middleware.BasicAuth, controllers.DeleteRating)
 
+	router.Run(":" + os.Getenv("PORT"))
+
 }
